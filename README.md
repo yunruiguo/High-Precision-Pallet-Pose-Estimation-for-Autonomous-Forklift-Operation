@@ -4,6 +4,16 @@
 项目通过检测托盘部件类别 `block` 和 `front`，结合深度图计算托盘中心位置、
 距离和相对角度，并向上位机发布结构化 ROS 话题。
 
+## Demo
+
+<video src="docs/pallet.mp4" controls width="100%">
+  Your browser does not support the video tag.
+</video>
+
+如果 GitHub 页面没有直接渲染视频，可以打开：
+
+[docs/pallet.mp4](docs/pallet.mp4)
+
 ## 功能特性
 
 - 使用 YOLOv8 检测托盘柱脚和前沿部件。
@@ -19,6 +29,7 @@
 ```text
 .
 ├── docs/
+│   ├── pallet.mp4
 │   └── 托盘识别技术方案.docx
 ├── src/
 │   └── yolov8_ros/
