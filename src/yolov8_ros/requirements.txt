@@ -1,0 +1,3 @@
+opencv-python==4.8.1.78
+ultralytics==8.0.202
+typing-extensions>=4.4.0

@@ -1,3 +1,14 @@
-.vscode
-__pycache__
-yolov8m-seg.pt
+.DS_Store
+.vscode/
+.vs/
+__pycache__/
+build/
+install/
+log/
+*.pyc
+*.pt
+*.onnx
+*.engine
+!src/yolov8_ros/yolov8_ros/weights/*.pt
+!src/yolov8_ros/yolov8_ros/weights/*.onnx
+!src/yolov8_ros/yolov8_ros/weights/*.engine
