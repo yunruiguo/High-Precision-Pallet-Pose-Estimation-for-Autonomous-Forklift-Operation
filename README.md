@@ -6,23 +6,39 @@
 [![YOLOv8](https://img.shields.io/badge/YOLOv8-Detection-orange?style=flat-square)](https://github.com/ultralytics/ultralytics)
 [![License](https://img.shields.io/badge/License-GPL--3.0-red?style=flat-square)](LICENSE)
 
-Real-time high-precision pallet pose estimation system based on YOLOv8 and RGB-D depth cameras for autonomous forklift operation. This project achieves robust detection and localization of pallet components through deep learning.
-
-**Key Capability:** Simultaneously detect pallet feet (`block`) and front edge (`front`), fuse depth maps for 3D position calculation, estimate relative angle, and publish structured ROS 2 topics for forklift control systems.
-
 ---
 
-## 📹 Video Demo
-
-> Click to watch demonstration video or download locally
+## 📹 Video Demo - System in Action
 
 <div align="center">
 
-[![Video Demo](docs/thumbnail.jpg)](docs/pallet.mp4)
+[![High-Precision Pallet Pose Estimation Demo Video](https://img.shields.io/badge/▶_Watch_Demo-FF0000?style=for-the-badge&logo=youtube)](docs/pallet.mp4)
 
-**[📥 Download Full Video](docs/pallet.mp4)** | **[🎬 Watch on GitHub](docs/pallet.mp4)**
+**Click above to watch the full demonstration video**
 
 </div>
+
+<div align="center">
+
+### Real-Time Pallet Detection & Pose Estimation
+
+<video width="100%" controls autoplay muted loop>
+  <source src="docs/pallet.mp4" type="video/mp4">
+  Your browser does not support the video tag. 
+  <a href="docs/pallet.mp4">Download video</a>
+</video>
+
+</div>
+
+> **Note:** If the video doesn't play in GitHub, [click here to download and watch the demo video](docs/pallet.mp4)
+
+---
+
+## 🎯 Project Overview
+
+Real-time high-precision pallet pose estimation system based on YOLOv8 and RGB-D depth cameras for autonomous forklift operation. This project achieves robust detection and localization of pallet components through deep learning.
+
+**Key Capability:** Simultaneously detect pallet feet (`block`) and front edge (`front`), fuse depth maps for 3D position calculation, estimate relative angle, and publish structured ROS 2 topics for forklift control systems.
 
 ---
 
@@ -90,7 +106,7 @@ Real-time high-precision pallet pose estimation system based on YOLOv8 and RGB-D
 │     ↓               ↓               ↓                    │
 │ Detection      Pose Stamped    Angle (Float64)         │
 │ Array          Message         Message                  │
-│     │               │               │                    │
+│     │               ��               │                    │
 │     └───────────────┼───────────────┘                   │
 │                     ↓                                     │
 │         ┌───────────────────────┐                       │
