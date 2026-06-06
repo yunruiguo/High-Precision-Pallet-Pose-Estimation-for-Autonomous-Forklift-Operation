@@ -83,39 +83,39 @@ Real-time high-precision pallet pose estimation system based on YOLOv8 and RGB-D
 ```
 ┌─────────────────────────────────────────────────────────┐
 │          RGB-D Camera (Orbbec Gemini Series)            │
-│                    ↓                                     │
+│                    ↓                                    │
 │        ┌───────────┴────────────┐                       │
-│        ↓                        ↓                        │
+│        ↓                        ↓                       │
 │    RGB Image              Depth Image                   │
-│        │                        │                        │
+│        │                        │                       │
 │        └────────────┬───────────┘                       │
-│                     ↓                                     │
+│                     ↓                                   │
 │        ┌────────────────────────┐                       │
-│        │  YOLOv8 Detector Node  │ (pallet_detector)    │
+│        │  YOLOv8 Detector Node  │ (pallet_detector)     │
 │        │  - Block Detection     │                       │
 │        │  - Front Detection     │                       │
 │        └────────────┬───────────┘                       │
-│                     ↓                                     │
+│                     ↓                                   │
 │        ┌────────────────────────┐                       │
 │        │  Pose Estimation       │                       │
 │        │  - 3D Localization     │                       │
 │        │  - Angle Calculation   │                       │
 │        └────────────┬───────────┘                       │
-│                     ↓                                     │
+│                     ↓                                   │
 │     ┌───────────────┼───────────────┐                   │
-│     ↓               ↓               ↓                    │
-│ Detection      Pose Stamped    Angle (Float64)         │
+│     ↓               ↓               ↓                   │
+│ Detection      Pose Stamped    Angle (Float64)          │
 │ Array          Message         Message                  │
-│     │               ��               │                    │
+│     │               ��               │                  │
 │     └───────────────┼───────────────┘                   │
-│                     ↓                                     │
+│                     ↓                                   │
 │         ┌───────────────────────┐                       │
-│         │  Debug Visualization  │ (rqt_image_view)     │
+│         │  Debug Visualization  │ (rqt_image_view)      │
 │         │  - Bounding Boxes     │                       │
 │         │  - Depth Overlay      │                       │
 │         │  - Angle Annotation   │                       │
 │         └───────────────────────┘                       │
-│                                                          │
+│                                                         │
 │                  ↓ (to Forklift Control)                │
 │         Upper Computer / Control System                 │
 └─────────────────────────────────────────────────────────┘
